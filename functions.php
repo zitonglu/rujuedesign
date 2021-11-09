@@ -21,8 +21,6 @@ require_once get_parent_theme_file_path('/functions/functions-addICP.php');
 require_once get_parent_theme_file_path('/functions/functions-CDN.php');
 // 网站主题相关设置函数
 require_once get_parent_theme_file_path('/functions/functions-option.php');
-// 变更导航的样式
-require_once get_parent_theme_file_path('/functions/functions-changeNav.php');
 // 增加文章侧栏自定义字段
 require_once get_parent_theme_file_path('/functions/functions-addSideInput.php');
 
@@ -35,25 +33,16 @@ add_theme_support('post-formats',array('image'));
 // 开启主题的小工具
 if( function_exists('register_sidebar')){
     register_nav_menus( array(
-    'primary' => __('顶部导航','limiwuwp'),
-    'link' => __('友情链接','limiwuwp'),
+    'primary' => __('顶部导航','rujuebook'),
+    'tool' => __('小工具','rujuebook'),
     ));
 }
 
 // 侧栏小工具
 if( function_exists('register_sidebar') ) {
     register_sidebar(array(
-        'name' => 'footer-sider',
-        'description'   => __('放置在列表页面底部','limiwuwp'),
-        'class' => 'index-sider',
-        'before_widget' => '<aside class="widget p-4 %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h5 class="widget-title">',
-        'after_title' => '</h5>'
-    ));
-    register_sidebar(array(
         'name' => 'right-sider',
-        'description'   => __('放置在文章页面的右侧','limiwuwp'),
+        'description'   => __('放置在文章页面的右侧','rujuebook'),
         'class' => 'right-sider',
         'before_widget' => '<aside class="widget pb-3 mb-4 %2$s">',
         'after_widget' => '</aside>',

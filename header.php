@@ -6,7 +6,7 @@
 <?php wp_head(); ?>
 
 <link rel="stylesheet" href="<?php _echo_CDN_URL('bootstrap.min.css','css')?>">
-<link rel="stylesheet" href="<?php bloginfo('template_url')?>/style.css?v=1.13">
+<link rel="stylesheet" href="<?php bloginfo('template_url')?>/style.css?v=0.1109">
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon"/>
 
 <!--[if lt IE 9]>
@@ -36,6 +36,37 @@
 </head>
 
 <body <?php body_class();?>>
+<?php wp_body_open();//钩子?>
 <script src="<?php _echo_CDN_URL('jquery.min.js')?>" type="text/javascript"></script>
 <script src="<?php _echo_CDN_URL('jquery.sidr.min.js')?>" type="text/javascript"></script><!-- 导肮栏JS -->
-<?php wp_body_open();//钩子?>
+
+<div class="container-fluid">
+    <a id="right-menu" href="#right-menut" class="float-right">&#8644</a>
+    <nav class="mt-2">
+        <a id="left-menu" href="#left-menu" class="mr-2">
+            <img src="<?php bloginfo('template_url'); ?>/favicon.ico" alt="ico" width="auto" height="20px" class="mr-1 pb-1"><?php bloginfo('name');?>
+        </a>
+        <?php if(!wp_is_mobile()):?>
+            <small class="text-muted"> - <?php bloginfo('description');?> - </small><!-- 副标题 -->
+        <?php endif?>
+    </nav><!-- 导航end -->
+    <div id="sidr-left">
+        <?php  if (has_nav_menu('primary')){
+               wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'container' => false,
+                'depth' => 2,
+                ));
+            }
+        ?>
+    </div>
+    <div id="sidr-right">
+        <?php  if (has_nav_menu('primary')){
+               wp_nav_menu(array(
+                'theme_location' => 'tool',
+                'container' => false,
+                'depth' => 2,
+                ));
+            }
+        ?>
+    </div>
