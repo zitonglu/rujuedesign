@@ -42,3 +42,33 @@ article .article .list-title-cate{
 	padding: 0 0.5em;
 	font-size:80%;
 }
+
+/*single*/
+.single img{max-width:100%;}
+.singlebox{margin:0 auto;max-width:800px;text-align:justify;line-height:1.75em;font-family:Microsoft YaHei;}
+.singlebox .tool{margin-bottom:3em;color:rgb(136, 136, 136)}
+.singlebox h1,.singlebox h2,.singlebox h3,.singlebox h4{
+	margin-bottom: .85em;
+	font-weight: 700;
+}
+.singlebox h1{font-size:2em;}
+.singlebox h2{font-size:1.8em;}
+.singlebox h3{font-size:1.6em;}
+.singlebox h4{font-size:1.4em;}
+.singlebox>section{margin-bottom:0.75em;}
+.single .right-sider{width:100px;}
+.singlebox ul{list-style: none;counter-reset:count;}
+.singlebox>ul li:before{content:'\27A7';color:#fe7e00;margin-right: 0.3em;}
+
+/*wp默认css*/
+.has-text-align-center,.aligncenter{text-align:center;}
+.has-text-align-right,.alignright{text-align:right;}
+.wp-block-quote{border-left:3px #fe7e00 solid;padding-left: 10px;}
+.wp-block-quote cite{font-size:85%;color:#818182}
+figcaption{text-align: center;color: #818182;font-size:85%;}
+.wp-block-media-text{display:flex;}
+.wp-block-media-text img{margin-right:1em;max-width:160px;height:auto;}
+.wp-block-media-text p strong{color:#fe7e00;}
+.wp-block-media-text p s{color:#818182;font-size:85%}
+.wp-block-gallery ul{list-style:none}
+.blocks-gallery-grid{padding-left:0;column-gap:.5em;column-count:3;}

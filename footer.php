@@ -29,7 +29,11 @@
 <?php if(!wp_is_mobile()){if(is_single() || is_archive()){ ?>
     <!-- 侧栏跟随 JS -->
     <script src="<?php _echo_CDN_URL('theia-sticky-sidebar.js')?>"></script>
-    <script>$(document).ready(function(){$('.right-sider').theiaStickySidebar({additionalMarginTop:45});})</script>
+    <script>$(document).ready(function(){$('.right-sider').theiaStickySidebar({additionalMarginTop:105});})</script>
+    <!-- 改变single页面商品 JS -->
+    <script>$(document).ready(function(){
+        $('.wp-block-media-text a').attr({'rel':'nofollow','target':'_blank'});
+    })</script>
 <?php }} ?>
 
 <?php wp_footer(); ?>

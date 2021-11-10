@@ -6,7 +6,7 @@
 <?php wp_head(); ?>
 
 <link rel="stylesheet" href="<?php _echo_CDN_URL('bootstrap.min.css','css')?>">
-<link rel="stylesheet" href="<?php bloginfo('template_url')?>/style.css?v=0.1109">
+<link rel="stylesheet" href="<?php bloginfo('template_url')?>/style.css?v=0.1110">
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon"/>
 
 <!--[if lt IE 9]>
