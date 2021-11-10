@@ -40,8 +40,8 @@ article .article .list-title-cate{
 	font-size:80%;
 }
 
-/*single*/
-.single img{max-width:100%;}
+/*single page*/
+.single img,.page img{max-width:100%;}
 .singlebox{margin:0 auto;max-width:800px;text-align:justify;line-height:1.75em;font-family:Microsoft YaHei;}
 .singlebox .tool{margin-bottom:3em;color:rgb(136, 136, 136)}
 .singlebox h1,.singlebox h2,.singlebox h3,.singlebox h4{
@@ -53,7 +53,7 @@ article .article .list-title-cate{
 .singlebox h3{font-size:1.6em;}
 .singlebox h4{font-size:1.4em;}
 .singlebox>section{margin-bottom:0.75em;}
-.single .right-sider{width:100px;}
+.single .right-sider,.page .right-sider{width:100px;}
 .singlebox ul{list-style: none;counter-reset:count;}
 .singlebox>ul li:before{content:'\27A7';color:#fe7e00;margin-right: 0.3em;}
 
