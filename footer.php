@@ -26,6 +26,7 @@
     <script>$(document).ready(function(){
         $('.wp-block-media-text a').attr({'rel':'nofollow','target':'_blank'});
     })</script>
+
 <?php else: ?>
     <!-- 无限下拉 JS -->
     <script src="<?php _echo_CDN_URL('infinitescroll.min.js')?>"></script>
