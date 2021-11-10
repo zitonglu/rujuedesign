@@ -46,8 +46,8 @@ if( function_exists('register_sidebar') ) {
         'class' => 'right-sider',
         'before_widget' => '<aside class="widget pb-3 mb-4 %2$s">',
         'after_widget' => '</aside>',
-        'before_title' => '<h5 class="widget-title">',
-        'after_title' => '</h5>'
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>'
     ));
 }
 

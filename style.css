@@ -17,5 +17,28 @@ Tags: rujue
 
 body{background-color:#F5F5F5;}
 a{color:#fe7e00;}
-a:hover{color:#fc5531}
-nav a,footer a{color:#212529}
+a:hover,.list-title-name:hover{color:#fc5531}
+nav a,footer a,.list-title-name{color:#212529}
+
+/*article*/
+article.articlebox{padding-left:8px;padding-right:8px;}
+article .article{background-color:#fff;}
+article .article:hover{box-shadow:0 0 3px #ddd;}
+/*article .article:hover{background-color:#fe7e00;transition:0.3s ease-out;box-shadow:3px 3px 1.5px #888888;}
+article .article:hover a{color:#fff}
+article .article:hover .media img{-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1);}*/
+article .article .list-title-name{
+	line-height:1.2;
+	display: inline-block;
+	padding: 0 0.5em 0.5em;
+}
+article .article .list-title-body{padding:1em 0.5em 0.25em;}
+article .article .list-title-body time{color:#fe7e00;}
+article .article .list-title-cate{
+	background-color:#ffecda;
+	background-color:#ffecdacc;
+	border-radius: 5px;
+	margin-top: 0.1em;
+	padding: 0 0.5em;
+	font-size:80%;
+}
