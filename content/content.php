@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID();?>" class="col-sm-6 col-md-4 col-lg-3 articlebox">
+<article id="post-<?php the_ID();?>" class="col-sm-6 col-md-4 col-xl-3 articlebox">
 	<div class="article">
 		<?php if(has_post_thumbnail()){ ?>
 			<a href="<?php the_permalink();?>" target="_blank" id="thumbnail-<?php the_ID();?>">

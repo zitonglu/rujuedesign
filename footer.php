@@ -15,11 +15,11 @@
 
 <script src="<?php _echo_CDN_URL('bootstrap.min.js')?>" type="text/javascript"></script>
 
+<!-- 菜单侧栏 -->
 <script>$(document).ready(function(){
     $('#left-menu').sidr({name:'sidr-left',side:'left'});
     $('#right-menu').sidr({name:'sidr-right',side:'right'});
-});</script><!-- 菜单侧栏 -->
-
+});</script>
 
 <?php if(is_single() || is_page()): ?>
     <!-- 改变single页面商品 JS -->
@@ -37,11 +37,11 @@
     <script src="<?php bloginfo('template_url')?>/js/index.js"></script>
 <?php endif?>
 
-<?php if(!wp_is_mobile()){if(is_single() || is_archive()){ ?>
+<?php if(!wp_is_mobile()): ?>
     <!-- 侧栏跟随 JS -->
     <script src="<?php _echo_CDN_URL('theia-sticky-sidebar.js')?>"></script>
-    <script>$(document).ready(function(){$('.right-sider').theiaStickySidebar({additionalMarginTop:105});})</script>
-<?php }} ?>
+    <script>$(document).ready(function(){$('#right-sider').theiaStickySidebar({additionalMarginTop:60});})</script>
+<?php endif?>
 
 <?php wp_footer(); ?>
 <?php echo get_option('rujuedesign_bottom_JQ');?>

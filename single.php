@@ -1,7 +1,7 @@
 <?php //普通文章页面
 get_header();?>
 <?php if(!wp_is_mobile()):?>
-<div class="right-sider float-right">
+<div class="right-sider float-right" id="right-sider">
   <div class="theiaStickySidebar text-center">
     <p>关注微信号<br>
       <img src="<?php bloginfo('template_url')?>/img/qrcode.jpg" alt="weixin">

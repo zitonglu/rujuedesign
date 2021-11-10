@@ -1,7 +1,7 @@
 <?php //基础列表页面
 get_header();?>
  <div class="row mt-3">
-    <div class="col-sm-9 col-md-10 col-12">
+    <div class="col-xl-10 col-12">
         <div class="container-fluid"><div class="row" id="masonry">
           <?php if (have_posts()){
             while ( have_posts()){
@@ -11,8 +11,8 @@ get_header();?>
         </div></div><!-- container-fluid -->
     </div>
     <?php if(!wp_is_mobile()):?>
-      <div class="col-sm-3 col-md-2 col-12">
-        <div class="theiaStickySidebar">
+      <div class="col-xl-2 d-none d-xl-block" id="right-sider">
+        <div class="theiaStickySidebar"><!-- 侧栏滚动 -->
           <?php dynamic_sidebar(__('right-sider','rujuedesign'));//右侧栏?>
         </div>
       </div><!-- 侧栏 end -->

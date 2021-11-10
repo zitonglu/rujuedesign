@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*
-Theme Name: 儒爵设计
+Theme Name: rujuedesign
 Theme URI: http://www.rujue.cn/
 Author: 解禁
 Author URI: https://www.rujue.cn/
 Description: 儒爵设计网站
-Version: 0.1108
+Version: 0.1110
 License: 
 License URI: 
 Text Domain: 
@@ -24,9 +24,6 @@ nav a,footer a,.list-title-name{color:#212529}
 article.articlebox{padding-left:8px;padding-right:8px;}
 article .article{background-color:#fff;}
 article .article:hover{box-shadow:0 0 3px #ddd;}
-/*article .article:hover{background-color:#fe7e00;transition:0.3s ease-out;box-shadow:3px 3px 1.5px #888888;}
-article .article:hover a{color:#fff}
-article .article:hover .media img{-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1);}*/
 article .article .list-title-name{
 	line-height:1.2;
 	display: inline-block;

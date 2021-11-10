@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="<?php _echo_CDN_URL('bootstrap.min.css','css')?>">
 <link rel="stylesheet" href="<?php bloginfo('template_url')?>/style.css?v=0.1111">
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon"/>
+<?php echo get_option('rujuedesign_top_JQ');?>
 
 <!--[if lt IE 9]>
   <script src="//apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
