@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID();?>" class="col-sm-4 col-md-3 col-lg-2 articlebox">
+<article id="post-<?php the_ID();?>" class="col-sm-6 col-md-4 col-lg-3 articlebox">
 	<div class="article">
 		<?php if(has_post_thumbnail()){ ?>
 			<a href="<?php the_permalink();?>" target="_blank" id="thumbnail-<?php the_ID();?>">
@@ -19,7 +19,7 @@
 				<time><?php the_time();?></time>
 			</p>
 		<?php }else{?>
-			<div class="media p-2">
+			<div class="media p-2 mb-3">
 	        <div class="media-left mr-2">
 	          <a href="#">
 	            <img class="media-object" src="<?php bloginfo('template_url'); ?>/favicon.ico" alt="ico" height="36px">

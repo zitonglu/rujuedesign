@@ -60,6 +60,26 @@ article .article .list-title-cate{
 .singlebox ul{list-style: none;counter-reset:count;}
 .singlebox>ul li:before{content:'\27A7';color:#fe7e00;margin-right: 0.3em;}
 
+/*分页*/
+.pagination{display:table;margin:0 auto}
+.screen-reader-text{display:none;}
+.nav-links{
+	display: flex;
+	padding-left: 0;
+	list-style: none;
+	border-radius: .25rem;
+}
+.nav-links .current{background-color:#fe7e00;color:#fff}
+.page-numbers{
+	position: relative;
+	display: block;
+	padding: .5rem .75rem;
+	margin-left: -1px;
+	line-height: 1.25;
+	border: 1px solid #dee2e6;
+	background-color:#fff;
+}
+
 /*wp默认css*/
 .has-text-align-center,.aligncenter{text-align:center;}
 .has-text-align-right,.alignright{text-align:right;}

@@ -6,7 +6,9 @@ get_header();?>
     <p>关注微信号<br>
       <img src="<?php bloginfo('template_url')?>/img/qrcode.jpg" alt="weixin">
     </p>
-    <a href="#left-menu">&uarr; 返回顶部</a>
+    <a href="#left-menu">&uarr; 返回顶部</a><br><br>
+    <?php echo previous_post_link('%link',__('&#9650 上一页','rujuedesign'))?><br>
+    <?php echo next_post_link('%link',__('&#9660 下一页','rujuedesign'))?>
   </div>
 </div>
 <?php endif?>
@@ -16,7 +18,13 @@ get_header();?>
   <?php if (have_posts()){
     while ( have_posts()){
       the_post();?>
-      <div class="tool"><?php the_author_nickname();_e(' - 发布于','rujuedesin'); ?> <time><?php the_time();?></time></div>
+      <div class="tool"><?php 
+      $rujuedesign_author_value = get_post_meta($post->ID,'_rujuedesign_author',true);
+      $rujuedesign_URL_value = get_post_meta($post->ID,'_rujuedesign_URL',true);
+      if($rujuedesign_URL_value){echo $rujuedesign_URL_value.' ';}
+      if($rujuedesign_author_value){echo $rujuedesign_author_value;}else{the_author_nickname();}
+      _e(' - 发布于','rujuedesin');
+       ?> <time><?php the_time();?></time></div>
   <?php the_content();}}?>
 </div>
 <?php get_footer();?>

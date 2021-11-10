@@ -20,20 +20,27 @@
     $('#right-menu').sidr({name:'sidr-right',side:'right'});
 });</script><!-- 菜单侧栏 -->
 
-<?php if(is_category() || is_archive() || wp_is_mobile()):?>
-<!-- 无限下拉 JS -->
-<script src="<?php _echo_CDN_URL('infinitescroll.min.js')?>"></script>
-<script>$(document).ready(function(){$("#infinitescroll").infinitescroll({loading:{finished:undefined,finishedMsg:"",img:null,msg:null,msgText:"",selector:null,speed:"fast",start:undefined},navSelector:".nav-links",nextSelector:".nav-links .next",itemSelector:"#infinitescroll article",maxPage:10,})})</script>
+
+<?php if(is_single() || is_page()): ?>
+    <!-- 改变single页面商品 JS -->
+    <script>$(document).ready(function(){
+        $('.wp-block-media-text a').attr({'rel':'nofollow','target':'_blank'});
+    })</script>
+<?php else: ?>
+    <!-- 无限下拉 JS -->
+    <script src="<?php _echo_CDN_URL('infinitescroll.min.js')?>"></script>
+    <!-- 加载图片 JS -->
+    <script src="<?php _echo_CDN_URL('imagesloaded.min.js')?>"></script>
+    <!-- 瀑布流 JS -->
+    <script src="<?php _echo_CDN_URL('masonry.min.js')?>"></script>
+    <!-- index JS -->
+    <script src="<?php bloginfo('template_url')?>/js/index.js"></script>
 <?php endif?>
 
 <?php if(!wp_is_mobile()){if(is_single() || is_archive()){ ?>
     <!-- 侧栏跟随 JS -->
     <script src="<?php _echo_CDN_URL('theia-sticky-sidebar.js')?>"></script>
     <script>$(document).ready(function(){$('.right-sider').theiaStickySidebar({additionalMarginTop:105});})</script>
-    <!-- 改变single页面商品 JS -->
-    <script>$(document).ready(function(){
-        $('.wp-block-media-text a').attr({'rel':'nofollow','target':'_blank'});
-    })</script>
 <?php }} ?>
 
 <?php wp_footer(); ?>
