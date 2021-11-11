@@ -27,35 +27,35 @@ article .article:hover{box-shadow:0 0 3px #ddd;}
 article .article .list-title-name{
 	line-height:1.2;
 	display: inline-block;
-	padding: 0 0.5em 0.5em;
+	padding: 0 0.5rem 0.5rem;
 }
-article .article .list-title-body{padding:1em 0.5em 0.25em;}
+article .article .list-title-body{padding:1rem 0.5rem 0.25rem;}
 article .article .list-title-body time{color:#fe7e00;}
 article .article .list-title-cate{
 	background-color:#ffecda;
 	background-color:#ffecdacc;
 	border-radius: 5px;
-	margin-top: 0.1em;
-	padding: 0 0.5em;
+	margin-top: 0.1rem;
+	padding: 0 0.5rem;
 	font-size:80%;
 }
 
 /*single page*/
 .single img,.page img{max-width:100%;}
-.singlebox{margin:0 auto;max-width:800px;text-align:justify;line-height:1.75em;font-family:Microsoft YaHei;}
-.singlebox .tool{margin-bottom:3em;color:rgb(136, 136, 136)}
+.singlebox{margin:0 auto;max-width:800px;text-align:justify;line-height:1.75rem;font-family:Microsoft YaHei;}
+.singlebox .tool{margin-bottom:3rem;color:rgb(136, 136, 136)}
 .singlebox h1,.singlebox h2,.singlebox h3,.singlebox h4{
-	margin-bottom: .85em;
+	margin-bottom: .85rem;
 	font-weight: 700;
 }
-.singlebox h1{font-size:2em;}
-.singlebox h2{font-size:1.8em;}
-.singlebox h3{font-size:1.6em;}
-.singlebox h4{font-size:1.4em;}
-.singlebox>section{margin-bottom:0.75em;}
+.singlebox h1{font-size:2rem;}
+.singlebox h2{font-size:1.8rem;}
+.singlebox h3{font-size:1.6rem;}
+.singlebox h4{font-size:1.4rem;}
+.singlebox>section{margin-bottom:0.75rem;}
 .single .right-sider,.page .right-sider{width:100px;}
 .singlebox ul{list-style: none;counter-reset:count;}
-.singlebox>ul li:before{content:'\27A7';color:#fe7e00;margin-right: 0.3em;}
+.singlebox>ul li:before{content:'\27A7';color:#fe7e00;margin-right: 0.3rem;}
 
 /*分页*/
 .pagination{display:table;margin:0 auto}
@@ -76,6 +76,11 @@ article .article .list-title-cate{
 	border: 1px solid #dee2e6;
 	background-color:#fff;
 }
+/*comments*/
+.children,.list-unstyled{margin-bottom:0.25rem}
+.home .children,.blog .children{padding:0}
+
+
 
 /*wp默认css*/
 .has-text-align-center,.aligncenter{text-align:center;}
@@ -84,8 +89,8 @@ article .article .list-title-cate{
 .wp-block-quote cite{font-size:85%;color:#818182}
 figcaption{text-align: center;color: #818182;font-size:85%;}
 .wp-block-media-text{display:flex;}
-.wp-block-media-text img{margin-right:1em;max-width:160px;height:auto;}
+.wp-block-media-text img{margin-right:1rem;max-width:160px;height:auto;}
 .wp-block-media-text p strong{color:#fe7e00;}
 .wp-block-media-text p s{color:#818182;font-size:85%}
 .wp-block-gallery ul{list-style:none}
-.blocks-gallery-grid{padding-left:0;column-gap:.5em;column-count:3;}
+.blocks-gallery-grid{padding-left:0;column-gap:.5rem;column-count:3;}

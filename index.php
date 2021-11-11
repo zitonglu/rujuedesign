@@ -13,7 +13,15 @@ get_header();?>
     <?php if(!wp_is_mobile()):?>
       <div class="col-xl-2 d-none d-xl-block" id="right-sider">
         <div class="theiaStickySidebar"><!-- 侧栏滚动 -->
-          <?php dynamic_sidebar(__('right-sider','rujuedesign'));//右侧栏?>
+          <?php //dynamic_sidebar(__('right-sider','rujuedesign'));右侧栏?>
+          <?php 
+            query_posts('pagename=message');
+            while(have_posts()){
+              the_post(); 
+              comments_template();
+            }
+            wp_reset_query();
+          ?>
         </div>
       </div><!-- 侧栏 end -->
     <?php endif?>

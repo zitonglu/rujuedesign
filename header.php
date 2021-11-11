@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="<?php _echo_CDN_URL('bootstrap.min.css','css')?>">
 <link rel="stylesheet" href="<?php bloginfo('template_url')?>/style.css?v=0.1111">
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon"/>
+<!-- https://icons.bootcss.com/图标，暂时用不到
+ <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"> -->
 <?php echo get_option('rujuedesign_top_JQ');?>
 
 <!--[if lt IE 9]>
@@ -43,6 +45,7 @@
 
 <div class="container-fluid">
     <a id="right-menu" href="#right-menut" class="float-right">&#8644</a>
+    
     <nav class="mt-2">
         <a id="left-menu" href="#left-menu" class="mr-2">
             <img src="<?php bloginfo('template_url'); ?>/favicon.ico" alt="ico" width="auto" height="20px" class="mr-1 pb-1"><?php bloginfo('name');?>

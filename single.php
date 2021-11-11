@@ -25,6 +25,6 @@ get_header();?>
       if($rujuedesign_author_value){echo $rujuedesign_author_value;}else{the_author_nickname();}
       _e(' - 发布于','rujuedesin');
        ?> <time><?php the_time();?></time></div>
-  <?php the_content();}}?>
+  <?php the_content();comments_template();}}?>
 </div>
 <?php get_footer();?>

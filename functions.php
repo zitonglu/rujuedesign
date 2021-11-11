@@ -9,6 +9,8 @@
  */
 // 去除WordPress相关鸡肋
 require_once get_parent_theme_file_path('/functions/functions-clearWP.php');
+//控制两次评论的间隔,移除表单及邮箱地址、评论人链接等
+require_once get_parent_theme_file_path('/functions/functions-commentTime.php');
 // 给每个RSSfeed里面增加最新文章列表和版权说明
 require_once get_parent_theme_file_path('/functions/functions-addFeedText.php');
 // 修改时间的显示格式为XXX秒、分钟、小时、天前
@@ -44,12 +46,17 @@ if( function_exists('register_sidebar') ) {
         'name' => 'right-sider',
         'description'   => __('放置在文章页面的右侧','rujuebook'),
         'class' => 'right-sider',
-        'before_widget' => '<aside class="widget pb-3 mb-4 %2$s">',
+        'before_widget' => '<aside class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h4 class="widget-title">',
         'after_title' => '</h4>'
     ));
 }
+// 使用的是经典小工具栏
+function example_theme_support() {
+  remove_theme_support('widgets-block-editor');
+}
+add_action( 'after_setup_theme', 'example_theme_support' );
 
 //分页函数
 function page_list(){
