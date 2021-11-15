@@ -22,11 +22,10 @@
 });</script>
 
 <?php if(is_single() || is_page()): ?>
-    <!-- 改变single页面商品 JS -->
     <script>$(document).ready(function(){
-        $('.wp-block-media-text a').attr({'rel':'nofollow','target':'_blank'});
+        $('.wp-block-media-text a').attr({'rel':'nofollow','target':'_blank'});//改变single页面商品 JS
     })</script>
-
+    <script>$('.collapse').collapse('hide');//下载相关</script>
 <?php else: ?>
     <!-- 无限下拉 JS -->
     <script src="<?php _echo_CDN_URL('infinitescroll.min.js')?>"></script>
@@ -35,7 +34,7 @@
     <!-- 瀑布流 JS -->
     <script src="<?php _echo_CDN_URL('masonry.min.js')?>"></script>
     <!-- index JS -->
-    <script src="<?php bloginfo('template_url')?>/js/index.js"></script>
+    <script src="<?php _echo_CDN_URL('index.js')?>"></script>
 <?php endif?>
 
 <?php if(!wp_is_mobile()): ?>
