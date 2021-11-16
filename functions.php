@@ -21,11 +21,17 @@ require_once get_parent_theme_file_path('/functions/functions-addWebp.php');
 require_once get_parent_theme_file_path('/functions/functions-addICP.php');
 // CDN加速直接输出返回CDN的URL地址
 require_once get_parent_theme_file_path('/functions/functions-CDN.php');
-// 网站主题相关设置函数
-require_once get_parent_theme_file_path('/functions/functions-option.php');
 // 增加文章侧栏自定义字段
 require_once get_parent_theme_file_path('/functions/functions-addSideInput.php');
 
+if ( is_user_logged_in()) {
+  // 网站主题相关设置函数
+  require_once get_parent_theme_file_path('/functions/functions-option.php');
+  // 增加百度API推送
+  if(get_option('baidu_api')){
+      require_once get_parent_theme_file_path('/functions/functions-baidu-API.php');
+  }
+}
 //开启缩略图
 if(function_exists('add_theme_support')){add_theme_support('post-thumbnails');};
 
