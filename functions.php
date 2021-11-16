@@ -31,6 +31,10 @@ if ( is_user_logged_in()) {
   if(get_option('baidu_api')){
       require_once get_parent_theme_file_path('/functions/functions-baidu-API.php');
   }
+  // UC浏览器神马搜索MIP推送
+  if(get_option('SM_MIP_user_name') && get_option('SM_MIP_Authkey')){
+      require_once get_parent_theme_file_path('/functions/functions-SM-MIP.php');
+  }
 }
 //开启缩略图
 if(function_exists('add_theme_support')){add_theme_support('post-thumbnails');};
@@ -75,5 +79,24 @@ function page_list(){
       )
     );
     echo $posts_pagination;
+}
+
+//解析网址函数
+function _parse_url($net,$n='host'){
+    $returnUrl = parse_url($net);
+    switch ($n){
+        case 'scheme':
+            return $returnUrl["scheme"];
+            break;
+        case 'path':
+            return $returnUrl["path"];
+            break;
+        case 'query':
+            return $returnUrl["query"];
+            break;
+        default:
+            return $returnUrl["host"];
+            break;
+    }
 }
 ?>
