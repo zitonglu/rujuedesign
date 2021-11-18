@@ -1,4 +1,7 @@
 <?php //普通文章页面
+if(in_category('PPT')){
+  get_template_part('single-PPT');
+}else{
 get_header();?>
 <?php if(!wp_is_mobile()):?>
 <div class="right-sider float-right" id="right-sider">
@@ -29,4 +32,4 @@ get_header();?>
        </div>
   <?php the_content();comments_template();}}?>
 </div>
-<?php get_footer();?>
+<?php get_footer();}?>

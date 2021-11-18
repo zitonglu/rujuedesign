@@ -23,7 +23,9 @@
 
 <?php if(is_single() || is_page()): ?>
     <script>$(document).ready(function(){
-        $('.wp-block-media-text a').attr({'rel':'nofollow','target':'_blank'});//改变single页面商品 JS
+        //改变single页面商品 JS
+        $('.wp-block-media-text a').attr({'rel':'nofollow','target':'_blank'});
+        $('.blocks-gallery-grid figure a').attr({'target':'_blank'});
     })</script>
     <script>$('.collapse').collapse('hide');//下载相关</script>
 <?php else: ?>

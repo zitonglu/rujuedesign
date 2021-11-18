@@ -91,4 +91,10 @@ figcaption{text-align: center;color: #818182;font-size:85%;}
 .wp-block-media-text p strong{color:#fe7e00;}
 .wp-block-media-text p s{color:#818182;font-size:85%}
 .wp-block-gallery ul{list-style:none}
-.blocks-gallery-grid{padding-left:0;column-gap:.5rem;column-count:3;}
+.columns-1{column-count:1;}
+.columns-2{column-count:2;}
+.columns-3{column-count:3;}
+.columns-4{column-count:4;}
+.columns-5{column-count:5;}
+.blocks-gallery-grid{padding-left:0;column-gap:.5rem;}
+.blocks-gallery-grid figcaption.blocks-gallery-item__caption{margin-top:-2rem;color:#fff}
