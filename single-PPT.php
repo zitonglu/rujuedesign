@@ -46,6 +46,13 @@
         transitionSpeed:'slow',
         slideNumber:'c/t'
     });
+    window.onload=function(){
+    var tags = document.getElementsByTagName("a");
+      for(var i=0; i<tags.length; i++){
+        var a = tags[i];
+        a.target="_blank";
+      }
+    }
   </script>
   <?php wp_footer(); ?>
   <?php echo get_option('rujuedesign_bottom_JQ');?>
