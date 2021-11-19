@@ -104,9 +104,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal ol,
 .reveal dl,
 .reveal ul{
-  display: inline-block;
   text-align: left;
-  margin: 0 0 0 1em;
+  margin-left:1em;
 }
 .reveal ol{list-style-type:decimal}
 .reveal ul{list-style-type:disc}
@@ -251,10 +250,14 @@ h2{text-align:left}
 .columns-4 .blocks-gallery-grid{column-count:4;-moz-column-count:4;-webkit-column-count:4}
 .columns-5 .blocks-gallery-grid{column-count:5;-moz-column-count:5;-webkit-column-count:5}
 .columns-6 .blocks-gallery-grid{column-count:6;-moz-column-count:6;-webkit-column-count:6}
-.mt-1{margin-top:1rem}
-.mt-2{margin-top:1.5rem}
-.mt-3{margin-top:2rem}
-.mt-4{margin-top:2.5rem}
-.mt-5{margin-top:3rem}
-.mt-6{margin-top:3.5rem}
+.mt-1{margin-top:1em !important}
+.mt-2{margin-top:1.5em !important}
+.mt-3{margin-top:2em !important}
+.mt-4{margin-top:2.5em !important}
+.mt-5{margin-top:3em !important}
+.mt-6{margin-top:3.5em !important}
+.lh-12{line-height:1.2;}
+.lh-15{line-height:1.5;}
+.lh-18{line-height:1.8;}
+.lh-2{line-height:2;}
 section.wp-block-image{width:100%;height:100%;}
