@@ -32,7 +32,12 @@
             _e(' - 发布于','rujuedesin');
              ?> <time><?php the_time();?></time></small></p>
           </section><!-- page 1 -->
-      <?php the_content();}} ?>
+          <section><?php the_content();?></section>
+          <section>
+            <h2><?php _e('谢谢聆听','rujuedesin');?></h2>
+            <p><?php _e('更多精彩内容请关注：','rujuedesin');?></p>
+          </section><!-- page end -->
+        <?php }} ?>
     </div><!-- end slides -->
   </div><!-- end reveal -->
   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.1.2/reveal.js"></script> -->

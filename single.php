@@ -1,7 +1,8 @@
 <?php //普通文章页面
-if(in_category('PPT')){
-  get_template_part('single-PPT');
-}else{
+$postType = get_post_format();//获取文章形式
+  if ($postType != null) {
+    get_template_part('single',get_post_format());
+  }else{//普通形式
 get_header();?>
 <?php if(!wp_is_mobile()):?>
 <div class="right-sider float-right" id="right-sider">
@@ -17,7 +18,6 @@ get_header();?>
 <?php endif?>
 <div class="singlebox mt-3">
   <h1><?php single_post_title(); ?></h1>
-
   <?php if (have_posts()){
     while ( have_posts()){
       the_post();?>
@@ -30,6 +30,6 @@ get_header();?>
        ?> <time><?php the_time();?></time>
        <?php get_template_part('other/download',get_post_format());//下载?>
        </div>
-  <?php the_content();comments_template();}}?>
+  <?php the_content();comments_template();}?>
 </div>
-<?php get_footer();}?>
+<?php get_footer();}} ?>

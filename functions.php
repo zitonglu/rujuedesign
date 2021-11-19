@@ -40,7 +40,7 @@ if ( is_user_logged_in()) {
 if(function_exists('add_theme_support')){add_theme_support('post-thumbnails');};
 
 // 开启文章相关形式
-add_theme_support('post-formats',array('image'));
+add_theme_support('post-formats',array('gallery'));
 
 // 开启主题的小工具
 if( function_exists('register_sidebar')){
