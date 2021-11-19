@@ -261,3 +261,17 @@ h2{text-align:left}
 .lh-18{line-height:1.8;}
 .lh-2{line-height:2;}
 section.wp-block-image{width:100%;height:100%;}
+/*wp-block-media-text*/
+.wp-block-media-text{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.wp-block-media-text__media{min-width:100px;max-width:40%;margin-right:0.8em;}
+.wp-block-media-text__media img{width:100%;height:auto;}
+.wp-block-media-text__content{font-size:85%;text-align:left;}
+.wp-block-media-text__content p{text-indent:2em;color:var(--r-title-tool-color);}
+.wp-block-media-text__content p.has-large-font-size{font-size:var(--r-heading3-size);text-indent:0;color:var(--r-main-color);}
+.wp-block-media-text__content p.has-large-font-size::before{content:'\27A7';color:var(--r-link-color);margin-right:0.3rem;}
+ul.ls-none{list-style:none;}

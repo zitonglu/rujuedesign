@@ -23,17 +23,33 @@
           ?>
           <section class="title">
             <h1><strong><?php single_post_title(); ?></strong></h1>
-            <p><small><?php 
-            $rujuedesign_author_value = get_post_meta($post->ID,'_rujuedesign_author',true);
-            $rujuedesign_URL_value = get_post_meta($post->ID,'_rujuedesign_URL',true);
-            if($rujuedesign_URL_value){echo $rujuedesign_URL_value.' ';}
-            if($rujuedesign_author_value){echo $rujuedesign_author_value;}else{the_author_nickname();}
-             ?> - <time><?php the_time();?></time></small></p>
+            <p>
+              <small>
+                <?php 
+                $rujuedesign_author_value = get_post_meta($post->ID,'_rujuedesign_author',true);
+                $rujuedesign_URL_value = get_post_meta($post->ID,'_rujuedesign_URL',true);
+
+                if($rujuedesign_URL_value){echo $rujuedesign_URL_value.' ';}
+                if($rujuedesign_author_value){echo $rujuedesign_author_value;}else{the_author_nickname();}
+                ?> - <time><?php the_time();?></time>
+                <?php echo get_the_tag_list(' - ',' | ','');?>
+              </small>
+            </p>
           </section><!-- page 1 -->
           <section><?php the_content();?></section>
           <section>
             <h2><?php _e('谢谢聆听','rujuedesin');?></h2>
-            <p><?php _e('更多精彩内容请关注：','rujuedesin');?></p>
+            <div class="wp-block-media-text mt-4">
+              <figure class="wp-block-media-text__media">
+                <img src="<?php bloginfo('template_url')?>/img/qrcode.jpg" alt="weixin">
+              </figure>
+              <div class="wp-block-media-text__content">
+                <p class="has-large-font-size"><?php _e('更多内容请关注微信公众号','rujuedesin');?></p>
+                <ul class="ls-none">
+                  <li><?php echo previous_post_link('%link','&#9650 %title')?></li>
+                  <li><?php echo next_post_link('%link','&#9660 %title')?></LI>
+                </ul>
+              </div>
           </section><!-- page end -->
           <?php 
           $metaNumber = get_post_meta($post->ID,'T',true);
