@@ -32,7 +32,15 @@
                 if($rujuedesign_URL_value){echo $rujuedesign_URL_value.' ';}
                 if($rujuedesign_author_value){echo $rujuedesign_author_value;}else{the_author_nickname();}
                 ?> - <time><?php the_time();?></time>
-                <?php echo get_the_tag_list(' - ',' | ','');?>
+                <?php echo get_the_tag_list(' - ',' | ',' ');?>
+                <br><br><small><?php 
+                _e('键盘 &#8592 &#8594 键翻页浏览，支持演讲笔翻页','rujuedesign');
+                  $PPTID = get_option('PPT_page');
+                  if ($PPTID) {
+                    echo ' <a href="' . get_page_link($PPTID) . '" target="_blank">>></a>';
+                  }
+                ?>
+              </small>
               </small>
             </p>
           </section><!-- page 1 -->
@@ -41,15 +49,20 @@
             <h2><?php _e('谢谢聆听','rujuedesin');?></h2>
             <div class="wp-block-media-text mt-4">
               <figure class="wp-block-media-text__media">
-                <img src="<?php bloginfo('template_url')?>/img/qrcode.jpg" alt="weixin">
+                <a href="<?php echo home_url();?>"><img src="<?php bloginfo('template_url')?>/img/qrcode.jpg" alt="weixin"></a>
               </figure>
               <div class="wp-block-media-text__content">
-                <p class="has-large-font-size"><?php _e('更多内容请关注微信公众号','rujuedesin');?></p>
+                <p class="has-large-font-size"><?php _e('全案内容请关注微信公众号输入文章ID','rujuedesin');echo ':'.$post->ID;?></p>
                 <ul class="ls-none">
                   <li><?php echo previous_post_link('%link','&#9650 %title')?></li>
                   <li><?php echo next_post_link('%link','&#9660 %title')?></LI>
                 </ul>
               </div>
+            </div>
+            <p class="mt-3"><small><?php _e('更多','rujuedesign')?><?php echo get_the_tag_list(' ',' , ',' ');?><?php _e('相关内容请点击浏览','rujuedesign')?>：<a href="<?php echo home_url();?>" class="endName" target="_blank"><img src="<?php bloginfo('template_url'); ?>/favicon.ico" alt="<?php _e('海安儒爵软件开发工作室','rujuedesign')?>"> <?php bloginfo('name');?></a></small></p>
+            <footer class="footer">2021-2022 <a href="//www.rujue.cn" title="<?php _e('海安儒爵软件开发工作室','rujuedesign')?>"><?php _e('海安儒爵软件开发工作室','rujuedesign')?></a> -    
+    <a href="//beian.miit.gov.cn/" rel="nofollow"><?php echo get_option( 'get_ICP' );?></a> Powered By <a href="//cn.wordpress.org" rel="nofollow">WordPress</a>. Theme by <a href="//www.rujue.cn" title="<?php _e('海安儒爵软件开发工作室','rujuedesign')?>">RuJue.cn</a>
+            </footer>
           </section><!-- page end -->
           <?php 
           $metaNumber = get_post_meta($post->ID,'T',true);
