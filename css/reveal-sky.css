@@ -238,18 +238,26 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .title p{text-align:right;color:var(--r-title-tool-color);}
 
 h2{text-align:left}
-.wp-block-gallery ul{list-style:none;margin-left:0;}
-.wp-block-gallery ul li,.wp-block-gallery ul li figure{margin:0;padding:0;}
-.wp-block-gallery img{height:100%;width:100%;}
-.wp-block-gallery figcaption{font-size:0.4em;text-align:center;padding:0 1em 1em;}
-.blocks-gallery-grid{padding-left:0;column-gap:0}
-/*.wp-block-gallery ul li{position:static;}*/
-.columns-1 .blocks-gallery-grid{column-count:1;-moz-column-count:1;-webkit-column-count:1}
-.columns-2 .blocks-gallery-grid{column-count:2;-moz-column-count:2;-webkit-column-count:2}
-.columns-3 .blocks-gallery-grid{column-count:3;-moz-column-count:3;-webkit-column-count:3}
-.columns-4 .blocks-gallery-grid{column-count:4;-moz-column-count:4;-webkit-column-count:4}
-.columns-5 .blocks-gallery-grid{column-count:5;-moz-column-count:5;-webkit-column-count:5}
-.columns-6 .blocks-gallery-grid{column-count:6;-moz-column-count:6;-webkit-column-count:6}
+/*画廊*/
+/*.wp-block-gallery{
+  max-height:460px;
+  overflow:hidden;
+}*/
+.wp-block-gallery ul.blocks-gallery-grid{
+  margin-left:0;
+  column-gap:0;
+  list-style:none;
+  display:flex;
+  max-height:500px;
+}
+.wp-block-gallery ul li.blocks-gallery-item{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  display:flex;
+}
+.wp-block-gallery ul li figure a img{object-fit:cover;height:100%;width:100%;}
+
 .mt-1{margin-top:1em !important}
 .mt-2{margin-top:1.5em !important}
 .mt-3{margin-top:2em !important}
@@ -266,10 +274,11 @@ h2{text-align:left}
   max-height:500px;
   max-width:770px;
 }
+/*单图片*/
 .wp-block-image img{object-fit: cover;max-width:100%;max-height:100%;}
 .wp-block-image figcaption{display:inline;}
 
-/*wp-block-media-text*/
+/*媒体框*/
 .wp-block-media-text{
   display: -ms-flexbox;
   display: flex;
