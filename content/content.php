@@ -2,12 +2,12 @@
 	<div class="article">
 		<?php if(has_post_thumbnail()){ ?>
 			<a href="<?php the_permalink();?>" target="_blank" id="thumbnail-<?php the_ID();?>">
-			  <?php the_post_thumbnail('medium',array('class'=>'img-fluid mb-2','alt'=>get_the_title(),'title'=>get_the_excerpt()));?>
+			  <?php the_post_thumbnail('thumbnail',array('class'=>'img-fluid mb-2','alt'=>get_the_title(),'title'=>get_the_excerpt()));?>
 			</a>
 			<a href="<?php the_permalink();?>" title="<?php the_title_attribute(); ?>" target="_blank" id="title-<?php the_ID();?>" class="list-title-name">	
 				<?php the_title_attribute(); ?>
 			</a>
-			<p class="list-title-body">
+			<p class="list-title-body text-muted">
 				<?php 
 				if(get_the_category()){//获取分类标签
 				$cats = get_the_category();
@@ -16,7 +16,7 @@
 					}
 				}
 				?>
-				<time><?php the_time();?></time>
+				<time><?php the_time();?></time> - ID<?php the_ID();?>
 			</p>
 		<?php }else{?>
 			<div class="media p-2 mb-3">

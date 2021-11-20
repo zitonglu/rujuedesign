@@ -19,8 +19,10 @@
 <body <?php body_class();?>>
 <?php 
   if (wp_is_mobile()){
-    _e('此文章仅支持电脑PC端浏览。','rujuedesin');
-  }else{
+    _e('此文章仅支持电脑PC端浏览。<br>请关注微信公众号，回复文章ID：','rujuedesin');
+    the_ID();?>
+    <img src="<?php bloginfo('template_url')?>/img/qrcode.jpg" alt="weixin">
+ <?php }else{
     wp_body_open();//钩子
 ?>
   <div class="reveal">
