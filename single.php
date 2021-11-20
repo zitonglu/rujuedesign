@@ -28,7 +28,10 @@ get_header();?>
       if($rujuedesign_author_value){echo $rujuedesign_author_value;}else{the_author_nickname();}
       _e(' - 发布于','rujuedesin');
        ?> <time><?php the_time();?></time>
-       <?php get_template_part('other/download',get_post_format());//下载?>
+      <?php 
+         echo get_the_tag_list(' - ',' | ',' - ');//标签
+         get_template_part('other/download',get_post_format());//下载
+      ?>
        </div>
   <?php the_content();comments_template();}?>
 </div>
