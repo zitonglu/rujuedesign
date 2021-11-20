@@ -8,7 +8,7 @@ get_header();?>
 <div class="right-sider float-right" id="right-sider">
   <div class="theiaStickySidebar text-center">
     <p><?php _e('关注微信号','rujuedesign')?><br>
-      <img src="<?php bloginfo('template_url')?>/img/qrcode.jpg" alt="weixin">
+      <img src="<?php bloginfo('template_url')?>/img/qrcode.jpg" alt="<?php _e('微信公众号','rujuedesign')?>">
     </p>
     <a href="#left-menu">&uarr; <?php _e('返回顶部','rujuedesign')?></a><br><br>
     <?php echo previous_post_link('%link',__('&#9650 上一页','rujuedesign'))?><br>

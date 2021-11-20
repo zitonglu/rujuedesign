@@ -7,14 +7,22 @@
 <?php wp_head(); ?>
 
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon"/>
+<?php if(!wp_is_mobile()):?>
 <link rel="stylesheet" href="<?php _echo_CDN_URL('reset.css','css')?>">
 <link rel="stylesheet" href="<?php _echo_CDN_URL('reveal.css','css')?>">
 <link rel="stylesheet" href="<?php _echo_CDN_URL('reveal-sky.css','css')?>" id="theme">
 <?php echo get_option('rujuedesign_top_JQ');?>
+<?php endif?>
 
 <title><?php single_post_title(); ?></title>
 </head>
-<body <?php body_class();?>><?php wp_body_open();//钩子?>
+<body <?php body_class();?>>
+<?php 
+  if (wp_is_mobile()){
+    _e('此文章仅支持电脑PC端浏览。','rujuedesin');
+  }else{
+    wp_body_open();//钩子
+?>
   <div class="reveal">
     <div class="slides">
       <?php if (have_posts()){
@@ -90,6 +98,6 @@
     }
   </script>
   <?php wp_footer(); ?>
-  <?php echo get_option('rujuedesign_bottom_JQ');?>
+  <?php echo get_option('rujuedesign_bottom_JQ');}//wp_is_mobile?>
 </body>
 </html>

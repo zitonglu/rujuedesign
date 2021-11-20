@@ -41,7 +41,7 @@ article .article .list-title-cate{
 }
 
 /*single page*/
-.single img,.page img{max-width:100%;}
+.single .singlebox img,.page .singlebox img{max-width:100%;height:auto;}
 .singlebox{margin:0 auto;max-width:800px;text-align:justify;line-height:1.75rem;font-family:Microsoft YaHei;}
 .singlebox .tool{margin-bottom:3rem;color:rgb(136, 136, 136)}
 .singlebox h1,.singlebox h2,.singlebox h3,.singlebox h4{
