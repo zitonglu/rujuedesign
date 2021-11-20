@@ -261,11 +261,14 @@ h2{text-align:left}
   list-style:none;
 }
 .wp-block-gallery ul li.blocks-gallery-item{
-  margin:0;
-  padding:0;
+  margin:0.2em;
+  padding:0em;
   overflow:hidden;
   display:flex;
 }
+.wp-block-gallery ul li.blocks-gallery-item:first-child{margin-top:0;}
+.m0 ul li.blocks-gallery-item{margin:0;}
+.b0 ul li.blocks-gallery-item{border:solid 1px var(--r-main-color);}
 .wp-block-gallery ul li figure a img{object-fit:cover;height:100%;width:100%;}
 .columns-2 .blocks-gallery-grid{column-count:2;-moz-column-count:2;-webkit-column-count:2;}
 .columns-3 .blocks-gallery-grid{column-count:3;-moz-column-count:3;-webkit-column-count:3;}

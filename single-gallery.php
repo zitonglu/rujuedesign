@@ -25,14 +25,7 @@
             <h1><strong><?php single_post_title(); ?></strong></h1>
             <p>
               <small>
-                <?php 
-                $rujuedesign_author_value = get_post_meta($post->ID,'_rujuedesign_author',true);
-                $rujuedesign_URL_value = get_post_meta($post->ID,'_rujuedesign_URL',true);
-
-                if($rujuedesign_URL_value){echo $rujuedesign_URL_value.' ';}
-                if($rujuedesign_author_value){echo $rujuedesign_author_value;}else{the_author_nickname();}
-                ?> - <time><?php the_time();?></time>
-                <?php echo get_the_tag_list(' - ',' | ',' ');?>
+                <?php echo get_the_tag_list('',' | ',' ');?> - <time><?php the_time();?></time>
                 <br><br><small><?php 
                 _e('键盘 &#8592 &#8594 键翻页浏览，支持演讲笔翻页','rujuedesign');
                   $PPTID = get_option('PPT_page');
