@@ -6,7 +6,7 @@
 <?php wp_head(); ?>
 
 <link rel="stylesheet" href="<?php _echo_CDN_URL('bootstrap.min.css','css')?>">
-<link rel="stylesheet" href="<?php bloginfo('template_url')?>/style.css?v=0.1119">
+<link rel="stylesheet" href="<?php bloginfo('template_url')?>/style.css?v=0.1120">
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon"/>
 <!-- https://icons.bootcss.com/图标，暂时用不到
  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"> -->

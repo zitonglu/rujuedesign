@@ -55,7 +55,17 @@ article .article .list-title-cate{
 .singlebox>section{margin-bottom:0.75rem;}
 .single .right-sider,.page .right-sider{width:100px;}
 .singlebox ul{list-style: none;counter-reset:count;}
-.singlebox>ul li:before{content:'\27A7';color:#fe7e00;margin-right: 0.3rem;}
+.singlebox>ul li::before{content:'\27A7';color:#fe7e00;margin-right: 0.3rem;}
+
+/*侧栏*/
+#right-sider{text-align:center;border-left: 1px dashed rgba(0,0,0,.2);}
+#right-sider #respond{margin-top:20px}
+#right-sider aside{margin-bottom:10px;}
+#right-sider aside ul{list-style:none;padding-left:0}
+.widget-title{font-size:1.3em;font-family:'KaiTi','LiSu','SimHei';}
+.widget-title::before{content:'\2014\2014';color:rgba(0,0,0,.1);margin-right: 0.7rem;}
+.widget-title::after{content:'\2014\2014';color:rgba(0,0,0,.1);margin-left: 0.7rem;}
+
 
 /*分页*/
 .pagination{display:table;margin:0 auto}
