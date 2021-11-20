@@ -4,7 +4,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 :root{
   --r-background-color: #F5F5F5;
   --r-main-font:inherit,Microsoft YaHei,SimHei,sans-serif;
-  --r-main-font-size: 40px;
+  --r-main-font-size: 30px;
   --r-main-color: #212529;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
@@ -16,10 +16,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-heading-text-shadow: none;
   --r-heading-font-weight: normal;
   --r-heading1-text-shadow: none;
-  --r-heading1-size: 1.2em;
-  --r-heading2-size: 1.15em;
-  --r-heading3-size: 1.1em;
-  --r-heading4-size: 1em;
+  --r-heading1-size: 1.8em;
+  --r-heading2-size: 1.5em;
+  --r-heading3-size: 1.3em;
+  --r-heading4-size: 1.2em;
   --r-code-font: monospace;
   --r-link-color: #fe7e00;
   --r-link-color-dark: #264c66;
@@ -195,7 +195,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 .reveal small{
   display: inline-block;
-  font-size: 0.6em;
+  font-size: 0.8em;
   line-height: 1.2em;
   vertical-align: top;
 }
@@ -234,30 +234,6 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 
 /*my*/
-.title h1{letter-spacing:0.05em;text-align:left;margin-top:20vh;}
-.title p{text-align:right;color:var(--r-title-tool-color);}
-
-h2{text-align:left}
-/*画廊*/
-/*.wp-block-gallery{
-  max-height:460px;
-  overflow:hidden;
-}*/
-.wp-block-gallery ul.blocks-gallery-grid{
-  margin-left:0;
-  column-gap:0;
-  list-style:none;
-  display:flex;
-  max-height:500px;
-}
-.wp-block-gallery ul li.blocks-gallery-item{
-  margin:0;
-  padding:0;
-  overflow:hidden;
-  display:flex;
-}
-.wp-block-gallery ul li figure a img{object-fit:cover;height:100%;width:100%;}
-
 .mt-1{margin-top:1em !important}
 .mt-2{margin-top:1.5em !important}
 .mt-3{margin-top:2em !important}
@@ -268,13 +244,44 @@ h2{text-align:left}
 .lh-15{line-height:1.5;}
 .lh-18{line-height:1.8;}
 .lh-2{line-height:2;}
+
+.title h1{letter-spacing:0.05em;text-align:left;margin-top:20vh;}
+.title p{text-align:right;color:var(--r-title-tool-color);}
+
+h2{text-align:left}
+
+/*画廊*/
+.wp-block-gallery{
+  max-height:500px;
+  overflow:hidden;
+}
+.wp-block-gallery ul.blocks-gallery-grid{
+  margin-left:0;
+  column-gap:0;
+  list-style:none;
+}
+.wp-block-gallery ul li.blocks-gallery-item{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  display:flex;
+}
+.wp-block-gallery ul li figure a img{object-fit:cover;height:100%;width:100%;}
+.columns-2 .blocks-gallery-grid{column-count:2;-moz-column-count:2;-webkit-column-count:2;}
+.columns-3 .blocks-gallery-grid{column-count:3;-moz-column-count:3;-webkit-column-count:3;}
+.columns-4 .blocks-gallery-grid{column-count:4;-moz-column-count:4;-webkit-column-count:4;}
+.columns-5 .blocks-gallery-grid{column-count:5;-moz-column-count:5;-webkit-column-count:5;}
+.columns-6 .blocks-gallery-grid{column-count:6;-moz-column-count:6;-webkit-column-count:6;}
+.yihang{display:flex;max-height:500px;overflow:hidden;}
+.yihang .blocks-gallery-grid{display:flex;}
+
+/*单图片*/
 .wp-block-image{
   display:-webkit-box;
   margin:0 auto;
   max-height:500px;
   max-width:770px;
 }
-/*单图片*/
 .wp-block-image img{object-fit: cover;max-width:100%;max-height:100%;}
 .wp-block-image figcaption{display:inline;}
 
@@ -291,9 +298,9 @@ h2{text-align:left}
 .wp-block-media-text__content p{text-indent:2em;color:var(--r-title-tool-color);}
 .wp-block-media-text__content p.has-large-font-size{font-size:var(--r-heading3-size);text-indent:0;color:var(--r-main-color);}
 .wp-block-media-text__content p.has-large-font-size::before{content:'\27A7';color:var(--r-link-color);margin-right:0.3rem;}
-ul.ls-none{list-style:none;}
+ul.ls-none{list-style:none;font-size:0.8em;margin-bottom:5em;line-height:1.5;}
 
-.footer{font-size:0.3em;color:var(--r-title-tool-color);}
+.footer{font-size:0.45em;color:var(--r-title-tool-color);}
 .footer a{color:var(--r-title-tool-color);}
 
 a.endName{color:var(--r-background-color);}
