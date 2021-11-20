@@ -267,6 +267,7 @@ h2{text-align:left}
   display:flex;
 }
 .wp-block-gallery ul li.blocks-gallery-item:first-child{margin-top:0;}
+.yihang ul li.blocks-gallery-item:first-child{margin-top:0.2em;}
 .m0 ul li.blocks-gallery-item{margin:0;}
 .b0 ul li.blocks-gallery-item{border:solid 1px var(--r-main-color);}
 .wp-block-gallery ul li figure a img{object-fit:cover;height:100%;width:100%;}
