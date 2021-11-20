@@ -41,7 +41,7 @@ article .article .list-title-cate{
 }
 
 /*single page*/
-.single .singlebox img,.page .singlebox img{max-width:100%;height:auto;}
+.single .singlebox img,.page .singlebox img,#right-sider img{max-width:100%;height:auto;}
 .singlebox{margin:0 auto;max-width:800px;text-align:justify;line-height:1.75rem;font-family:Microsoft YaHei;}
 .singlebox .tool{margin-bottom:3rem;color:rgb(136, 136, 136)}
 .singlebox h1,.singlebox h2,.singlebox h3,.singlebox h4{
@@ -58,7 +58,9 @@ article .article .list-title-cate{
 .singlebox>ul li::before{content:'\27A7';color:#fe7e00;margin-right: 0.3rem;}
 
 /*侧栏*/
-#right-sider{text-align:center;border-left: 1px dashed rgba(0,0,0,.2);}
+.blog #right-sider,
+.home #right-sider,
+.category #right-sider{text-align:center;border-left: 1px dashed rgba(0,0,0,.2);}
 #right-sider #respond{margin-top:20px}
 #right-sider aside{margin-bottom:10px;}
 #right-sider aside ul{list-style:none;padding-left:0}
