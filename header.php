@@ -45,6 +45,9 @@
 
 <div class="container-fluid">
     <a id="right-menu" href="#right-menut" class="float-right">&#8644</a>
+    <?php if(!is_user_logged_in()):?>
+        <a href="<?php echo wp_login_url(home_url()); ?>" class="float-right mr-2">登录</a>
+    <?php endif?>
     
     <nav class="mt-2">
         <a id="left-menu" href="#left-menu" class="mr-2">
