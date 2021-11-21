@@ -43,7 +43,7 @@ article .article .list-title-cate{
 /*single page*/
 .single .singlebox img,.page .singlebox img,#right-sider img{max-width:100%;height:auto;}
 .singlebox{margin:0 auto;max-width:800px;text-align:justify;line-height:1.75rem;font-family:Microsoft YaHei;}
-.singlebox .tool{margin-bottom:3rem;color:rgb(136, 136, 136)}
+.singlebox .tool{margin-bottom:2rem;color:rgb(136, 136, 136)}
 .singlebox h1,.singlebox h2,.singlebox h3,.singlebox h4{
 	margin-bottom: .85rem;
 	font-weight: 700;
@@ -99,7 +99,8 @@ article .article .list-title-cate{
 .wp-block-quote cite{font-size:85%;color:#818182}
 figcaption{text-align: center;color: #818182;font-size:85%;}
 .wp-block-media-text{display:flex;}
-.wp-block-media-text img{margin-right:1rem;max-width:160px;height:auto;}
+.wp-block-media-text .wp-block-media-text__media img{margin-right:1rem;max-width:450px !important}
+.wp-block-media-text .has-large-font-size{font-size:1.6em;font-weight:700;}
 .wp-block-media-text p strong{color:#fe7e00;}
 .wp-block-media-text p s{color:#818182;font-size:85%}
 .wp-block-gallery ul{list-style:none}
