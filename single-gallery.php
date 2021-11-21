@@ -75,7 +75,13 @@
             $tran = $transitionArray[$metaNumber];
           }else{
             $tran = $transitionArray[0];
-          }// end tran
+          }// 幻灯片播放过渡动画形式
+          $autoSlide = get_post_meta($post->ID,'A',true);
+          if(is_numeric($autoSlide) && $autoSlide > 1){
+            $autoSlide = floor($autoSlide);
+          }else{
+            $autoSlide = 0;
+          }
         }} ?>
     </div><!-- end slides -->
   </div><!-- end reveal -->
@@ -89,6 +95,8 @@
         transition:'<?php echo $tran;?>',
         transitionSpeed:'default',// default-中速/fast-快速/slow-慢速
         viewDistance: 3,
+        mouseWheel:true,
+        autoSlide:<?php echo $autoSlide;?>,
         slideNumber:'c/t'
     });
     window.onload=function(){// 给所有的链接增加一个新窗户
