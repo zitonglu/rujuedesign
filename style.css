@@ -93,6 +93,7 @@ article .article .list-title-cate{
 .home .children,.blog .children{padding:0}
 
 /*wp默认css*/
+.img-fluid{width:100%}
 .has-text-align-center,.aligncenter{text-align:center;}
 .has-text-align-right,.alignright{text-align:right;}
 .wp-block-quote{border-left:3px #fe7e00 solid;padding-left: 10px;}
